@@ -25,7 +25,7 @@ docker-composer up -d
 4. Generate a client certificate without a passphrase
 
 ```
-ocker-compose run --rm openvpn easyrsa build-client-full {client_name} nopass  
+docker-compose run --rm openvpn easyrsa build-client-full {client_name} nopass  
 ```
 
 `{client_name}` - client name without spaces. Example: my_phone, laptop, home_pc, server_1
