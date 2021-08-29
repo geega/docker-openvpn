@@ -1,0 +1,13 @@
+version: '2'
+
+services:
+  openvpn:
+    cap_add:
+      - NET_ADMIN
+    image: kylemanna/openvpn:2.3
+    container_name: openvpn
+    ports:
+      - "1194:1194/udp"
+    restart: always
+    volumes:
+      - ${OPENVPN_CONFIG_FILE_PATH}:/etc/openvpn
